@@ -14,26 +14,32 @@
       Mas não se preocupe! Com essa cifra você poderá traduzir textos sith e desvendar seus segredos!</p>
       <div>
       <form>
-        <label for="texto usuário1"></label>
+        <label for="texto para cifrar"></label>
         <input
         type="texto para cifrar"
         id="texto usuário1"
-        placeholder="Digite seu texto aqui"
-        name="texto usuário1"
+        placeholder="Digite sua mensagem"
+        name="texto para cifrar"
         required
         />
+
+        <button cifrar="button">converter para Sith
+        </button>
+
       </div>
-      <div>
       </form>
+      <div>
       <form>
-        <label for="seleção do offset"></label>
+        <label for="texto para decifrar"></label>
         <input
-        type="offset"
-        id="seleção offset"
-        placeholder="Escolha o offset"
-        name="seleção do offset"
+        type="texto para decifrar"
+        id="texto usuário2"
+        placeholder="Digite um texto Sith"
+        name="texto para decifrar"
         required
         />
+        <button decifrar="button">desvendar mensagem Sith
+        </button>
         </div>
       </form>
   </body>
