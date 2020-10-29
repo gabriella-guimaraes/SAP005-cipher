@@ -8,39 +8,52 @@
   <body>
     <div id="root">
       <h1>Cifra Sith</h1>
+      <hr>
     </div>
     <script src="index.js" type="module"></script>
     <p> A ur-Kittât, mais conhecida como língua Sith, era uma língua secreta utilizada pela Ordem Sith. Essa antiga língua foi apagada de todos os registros da galáxia e seus falentes nativos foram extintos. 
       Mas não se preocupe! Com essa cifra você poderá traduzir textos sith e desvendar seus segredos!</p>
-      <div>
+
+    <p> Para traduzir sua mensagem de forma correta digite apenas letras. A mensagem não pode conter caracteres especiais.</p>
+      
+    <div> 
       <form>
-        <label for="texto para cifrar"></label>
+        <label for="texto"></label>
         <input
-        type="texto para cifrar"
-        id="texto usuário1"
+        type="text"
+        id="texto"
         placeholder="Digite sua mensagem"
-        name="texto para cifrar"
-        required
+        class= "texto"
+        value=""
+        
+         required
         />
 
-        <button cifrar="button">converter para Sith
-        </button>
+      
 
-      </div>
+      
       </form>
-      <div>
+      
       <form>
-        <label for="texto para decifrar"></label>
+        <label for="OffsetKey"></label>
         <input
-        type="texto para decifrar"
-        id="texto usuário2"
-        placeholder="Digite um texto Sith"
-        name="texto para decifrar"
+        type="number"
+        id="offsetkey"
+        placeholder="Escolha uma chave"
+        class="offsetKey"
+        min="1"
+        value=""
+
         required
         />
-        <button decifrar="button">desvendar mensagem Sith
-        </button>
-        </div>
+    </div>
+      <div class = "button"> 
+        
+        <button id="button1" onclick="clicar()">cifrar Sith</button>
+      </div> 
+      <div class="button">
+        <button id="button2" onclick="clicar()">decifrar Sith</button>
+      </div>
       </form>
   </body>
 </html>
