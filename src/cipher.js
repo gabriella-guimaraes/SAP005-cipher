@@ -1,12 +1,27 @@
 
-//const alfabeto = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
-//console.log (alfabeto)
+const alphabetSize = 26;
+const cod1aAlphabet = 65;
+
+let finalMsgEncoded = "";
+
+//fórmula: ((códigoDaLetraASC - códigoDaLetra + deslocamento)%26 ==> tamanho do alfabeto) + códigoDaLetra
+//função de critografar
+const cipher = { 
+  encode (offsetKey,msgToCod){
+    msgToCod = '';
+    for (let i=0; i<msgToCod.lenght; i++){
+      let encodedMsg = ((msgToCod.charcodeAt(i) - cod1aAlphabet + offsetKey) % alphabetSize) + cod1aAlphabet;
+      let final = String.fromCharCode(encodedMsg);
+      finalEncodedMsg += final
+      return finalEncodedMsg
+    }
+    
+
+  }
+ };
+  
+ 
 
 
-//pegar o valor da posição
-const cipher = {
-  //fórmula: ((códigoDaLetraASC - códigoDaLetra + deslocamento)%26 ==> tamanho do alfabeto) + códigoDaLetra
-
-};
-
+ 
 export default cipher;
