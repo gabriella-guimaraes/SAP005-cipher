@@ -5,33 +5,28 @@
     <title>Caesar Cipher</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body class="background">
     <div id="root">
       <h1>Cifra Sith</h1>
       <hr>
     </div>
     <script src="index.js" type="module"></script>
     <p> A ur-Kittât, mais conhecida como língua Sith, era uma língua secreta utilizada pela Ordem Sith. Essa antiga língua foi apagada de todos os registros da galáxia e seus falentes nativos foram extintos. 
-      Mas não se preocupe! Com essa cifra você poderá traduzir textos sith e desvendar seus segredos!</p>
+      Mas não se preocupe, com essa cifra você poderá traduzir textos sith e desvendar seus segredos!</p>
 
     <p> Para traduzir sua mensagem de forma correta digite apenas letras. A mensagem não pode conter caracteres especiais.</p>
       
-    <div> 
+    <div class="encodeMsg"> 
+      <p>Cifre uma mensagem Sith: </p>
+
+
+
       <form>
         <label for="texto"></label>
-        <input
-        type="text"
-        id="texto"
-        placeholder="Digite sua mensagem"
-        class= "texto"
-        value=""
+        <textarea class="field" id="msgToCode" name="message" placeholder="Type your message here" rows="10" cols="45" >
         
-         required
-        />
+        </textarea>
 
-      
-
-      
       </form>
       
       <form>
@@ -40,20 +35,49 @@
         type="number"
         id="offsetkey"
         placeholder="Escolha uma chave"
+        class="offsetkey"
+        min="1"
+        value=""
+
+        required
+        />
+      </form>
+
+      <button id="button1" >cifrar Sith</button>
+      
+    </div>
+    
+        
+      
+     <div class="decodeMsg">
+      <p>Decifre uma mensagem Sith:
+      </p>
+      <form>
+
+        <label for="text"></label>
+        <textarea class="field" id="msgToEncode" name="message2" placeholder="Type your message here" rows="10" cols="45">
+        
+        </textarea>
+
+      <form>
+        <label for="OffsetKey"></label>
+        <input
+        type="number"
+        id="offsetkey2"
+        placeholder="Escolha uma chave"
         class="offsetKey"
         min="1"
         value=""
 
         required
         />
-    </div>
-      <div class = "button"> 
-        
-        <button id="button1" onclick="clicar()">cifrar Sith</button>
-      </div> 
-      <div class="button">
-        <button id="button2" onclick="clicar()">decifrar Sith</button>
-      </div>
       </form>
+
+
+      
+        <button id="button2" >decifrar Sith</button>
+    </div>
+      </form>
+      <p class="finalMsg1">Mensagem final</p>
   </body>
 </html>
