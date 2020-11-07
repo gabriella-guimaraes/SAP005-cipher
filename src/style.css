@@ -9,13 +9,13 @@ body,html{
  }
 body {
  font-family: arial;
- font-size: 20px; 
+ font-size: 18px; 
  color: white; 
  text-align: center;
  
 }
 .background {
-  background-image: url("wallpaperflare.com_wallpaper.jpg");
+  background-image: url("earth-space-view-4k-62.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -23,37 +23,42 @@ body {
 }
 h1 {
  font-size: 35px;
- color: red;   
+ color: white; 
+ text-align: center;
+ margin-right: 70%;
+ margin-top: 0%;
+ font-family: corbel;
 }
 p {
   width: 75%;
   display: inline-block; 
   text-align: left;
 }
-#button1 {
-  display: inline-block;  
+
+.textArea {
+  background-color: #231a3e00;
+  color: white;
+  display: inline-block;
 }
 
-.encodeMsg {
+.userMessage {
+  width: 40%;
   display: inline-block;
-  width: 45%;
   text-align: left;
-  box-shadow: 0 4px 8px black;
-  
+  margin-left: 5%;
 }
-
-
-.decodeMsg {
+.result {
+  width: 40%;
   display: inline-block;
-  width: 45%;
-  text-align: right;
-  box-shadow: 0 4px 8px black;
-  vertical-align: top;
-  
+  text-align: left;
 }
-#button2{
+.button {
   display: inline-block;
-}
-p.finalMsg1 {
-  text-align: center;
+  border: solid 1px white;
+  background-color:  #231a3e00;
+  color: white;
+  cursor: pointer;
+  font-family: corbel;
+  font-size: 14px;
+  border-radius: 8%;
 }
