@@ -1,24 +1,30 @@
 import cipher from './cipher.js';
 
-console.log(cipher);
-const msgToCod = document.getElementById("msgToCod").value;
-const offsetKey =document.getElementById("offsetkey").value;
-const btn = document.getElementById("button1");
-console.log(msgToCod);
-console.log(offsetKey);
-//document.getElementById("encode").addEventListener("click", function(){encode(offsetKey, msgToCod)});
-
-//btn.onclick = ev => {} ---> teste do botão
+const btn = document.getElementById("encodeButton");
 btn.addEventListener("click", encode);
+// encode function
 function encode (){
- let msg = cipher.encode(Number(offsetKey.value),)
- document.getElementsByClassName("finalMsg1")[0].innerHTML = msg;
+    event.preventDefault();
+    let userMessage = document.getElementById("userMessage").value.toUpperCase();
+    const offset = parseInt(document.getElementById("offset").value);
+    let msg = cipher.encode(userMessage, offset);
+    const result = document.getElementById("result");
+    result.innerHTML = msg;
+   }
+
+const btn2 = document.getElementById("decodeButton");
+btn2.addEventListener("click",decode);
+ //decode function
+function decode (){
+    event.preventDefault();
+    let userMessage = document.getElementById("userMessage").value.toUpperCase();
+    const offset = parseInt(document.getElementById("offset").value);
+    let msg2 = cipher.decode(userMessage, offset);
+    const result2 = document.getElementById("result");
+    result2.innerHTML = msg2;
 }
-    
-    
-
-//const msgToCod = document.getElementById(msgToCod).value;
-//const offsetkey = Number(document.getElementById('offsetkey').value)
 
 
+
+console.log(cipher);
 
