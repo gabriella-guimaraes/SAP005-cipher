@@ -42,16 +42,22 @@ p {
 }
 
 .userMessage {
-  width: 40%;
   display: inline-block;
   text-align: left;
   margin-left: 5%;
+  position: absolute;
+  left: 98px;
+  bottom: 86px;
 }
+
 .result {
-  width: 40%;
-  display: inline-block;
   text-align: left;
+  text-align: left;
+  position: absolute;
+  right: 60px;
+  bottom: 130px;
 }
+
 .button {
   display: inline-block;
   border: solid 1px white;
